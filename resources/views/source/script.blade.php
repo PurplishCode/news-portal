@@ -4,6 +4,7 @@
 <script src="{{ asset('js/chart.min.js') }}"></script>
 <script src="{{ asset('js/echarts.min.js') }}"></script>
 <script src="{{ asset('js/quill.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{ asset('js/simple-datatables.js') }}"></script>
 <script src="{{ asset('js/tinymce.min.js') }}"></script>
 <script src="{{ asset('js/validate.js') }}"></script>

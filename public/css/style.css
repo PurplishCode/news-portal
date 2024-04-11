@@ -11,6 +11,23 @@
 	color: #444444;
   }
 
+  .divider {
+    border-top: 1px solid black;
+  }
+
+  body.radiento {
+    background-image: linear-gradient(to right, #ff9a9e, #fad0c4);
+    margin: 0;
+    height: 100vh;
+  }
+
+  div.title {
+
+    text-align: center;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
   a {
 	color: #4154f1;
 	text-decoration: none;
