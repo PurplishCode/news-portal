@@ -26,4 +26,10 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/home', function(){
         return view('main.home');
     })->name('home.view');
+
+    Route::get('/admin/home', function(){
+        return view('admin.home');
+    })->name('home-admin.view');
+
+    Route::post('logout', [SessionController::class, 'logout'])->name('logout');
 });

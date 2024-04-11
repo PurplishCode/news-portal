@@ -50,16 +50,24 @@ class SessionController extends Controller
             $credentials = $request->only('email', 'password');
 
             if(Auth::attempt($credentials)) {
+                $request->session()->regenerate();
 
                 if($findEmail->level === 'admin') {
                     return to_route('home-admin.view')->with('success', "Welcome back Admin!");
                 } else {
                     return to_route('home.view');
                 }
-                return to_route('home.view')->with('success', 'Welcome back user');
+                return to_route('home.view')->with('success', 'Welcome back User!');
             } else {
                 return redirect()->back()->withErrors('Login is unsuccessful, try again.');
             }
         }
+    }
+
+    public function logout() {
+        Auth::logout();
+        session()->flush();
+
+        return to_route('login.view');
     }
 }
