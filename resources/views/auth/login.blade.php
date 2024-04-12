@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     @include('sweetalert::alert')
+    @include('source.script')
+    @include('source.style')
 </head>
 <body>
-    @extends('layout.baseplate')
-    @section('content')
     <section>
         <main class="d-flex justify-content-center align-items-center min-vh-100 p-3">
             <div class="card" style="width: 500px; border:1px solid black;">
@@ -38,8 +38,6 @@
             </div>
         </main>
     </section>
-    @endsection
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
-
 </html>

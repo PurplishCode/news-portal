@@ -10,11 +10,11 @@ Route::get('/', function () {
 Route::middleware(['guest'])->group(function(){
     Route::get('/register', function(){
         return view('auth.register');
-    });
+    })->name('register.view');
     Route::get('/login', function(){
         $email = session()->get('email');
         return view('auth.login', ['email' => $email]);
-    })->name('login.view');
+    })->name('login');
 
     Route::post('register', [SessionController::class, 'register'])->name('post.register');
 
@@ -23,13 +23,31 @@ Route::middleware(['guest'])->group(function(){
 
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('/home', function(){
-        return view('main.home');
-    })->name('home.view');
 
     Route::get('/admin/home', function(){
         return view('admin.home');
     })->name('home-admin.view');
 
-    Route::post('logout', [SessionController::class, 'logout'])->name('logout');
+    Route::get('logout', [SessionController::class, 'logout'])->name('logout');
+
+Route::get('/admin/data-berita', function(){
+    return view('admin.data-berita');
+})->name('data-berita.view');
+
+Route::get('/admin/data-pengguna', function(){
+    return view('admin.data-pengguna');
+})->name('data-pengguna.view');
+
 });
+
+Route::get('/about-us', function(){
+    return view('main.about-us');
+})->name('about-us.view');
+
+Route::get('/home', function(){
+    return view('main.home');
+})->name('home.view');
+
+Route::get('/berita-terkini', function(){
+    return view('main.berita-terkini');
+})->name('berita-terkini.view');

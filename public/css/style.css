@@ -356,8 +356,9 @@
 	}
   }
   .logo img {
-	max-height: 26px;
 	margin-right: 6px;
+    border: 1px solid black;
+    border-radius: 20px;
   }
   .logo span {
 	font-size: 26px;

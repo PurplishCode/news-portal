@@ -70,6 +70,6 @@ class SessionController extends Controller
         Auth::logout();
         session()->flush();
 
-        return to_route('login.view');
+        return to_route('login');
     }
 }
