@@ -8,6 +8,8 @@
 @include('source.script')
 </head>
 <body>
+    @include('layout.navbar')
+    @include('layout.sidebar')
 @yield('content')
 <script src="./resources/js/app.js"></script>
 </body>

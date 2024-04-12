@@ -30,8 +30,8 @@
 <div class="divider mx-4">
 
 <div class="card-text my-2">Already have an account? <a href="">Sign up!</a></div>
-@if (session('errors'))
-<div class="alert alert-danger mx-4">{{ session()->all() }}</div>
+@if (session('error'))
+<div class="alert alert-danger mx-4">{{ session('error') }}</div>
 @endif
 </div>
 </form>

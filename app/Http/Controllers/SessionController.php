@@ -59,8 +59,10 @@ class SessionController extends Controller
                 }
                 return to_route('home.view')->with('success', 'Welcome back User!');
             } else {
-                return redirect()->back()->withErrors('Login is unsuccessful, try again.');
+                return redirect()->back()->withError('Login is unsuccessful, try again.');
             }
+        } else {
+            return redirect()->back()->withError('Sorry, we cannot find any associated account.');
         }
     }
 
