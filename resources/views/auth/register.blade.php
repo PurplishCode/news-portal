@@ -8,10 +8,10 @@
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-
+@include('source.style')
+@include('source.script')
 <body>
-    @extends('layout.baseplate')
-    @section('content')
+
     <section>
         <main class="d-flex justify-content-center align-items-center min-vh-100 p-3">
             <div class="card" style="width: 500px; border:1px solid black;">
@@ -35,7 +35,7 @@
 
 <div class="divider mx-4">
 
-<div class="card-text my-2">Already have an account? <a href="">Sign in!</a></div>
+<div class="card-text my-2">Already have an account? <a href="{{ route('login') }}">Sign in!</a></div>
 @if (session('errors'))
 <div class="alert alert-danger mx-4">{{ session()->all() }}</div>
 @endif
@@ -44,7 +44,7 @@
             </div>
         </main>
     </section>
-    @endsection
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 

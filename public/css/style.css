@@ -5,6 +5,28 @@
 	scroll-behavior: smooth;
   }
 
+  /*
+# News
+ */
+
+.news-list {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    .first-news {
+        border: 1px solid black;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
   body {
 	font-family: "Montserrat", sans-serif;
 	background: #f6f9ff;
@@ -368,6 +390,8 @@
   }
 
   .header {
+    position: fixed;
+    width: 100%;
 	transition: all 0.5s;
 	z-index: 997;
 	height: 60px;

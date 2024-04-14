@@ -34,6 +34,11 @@ Route::get('/admin/data-berita', function(){
     return view('admin.data-berita');
 })->name('data-berita.view');
 
+
+Route::get('/create/post', function(){
+    return view('main.create-berita');
+})->name('create-post.view');
+
 Route::get('/admin/data-pengguna', function(){
     return view('admin.data-pengguna');
 })->name('data-pengguna.view');

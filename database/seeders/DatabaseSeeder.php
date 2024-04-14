@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -23,17 +24,30 @@ class DatabaseSeeder extends Seeder
 
     User::create([
         'username' => 'darell',
-        'email' => 'darellCool@gmail.com',
-        'password' => Hash::make('darellCool'),
+        'email' => 'admin@gmail.com',
+        'password' => Hash::make('admin'),
         'level' => 'admin'
     ]);
 
 
     User::create([
         'username' => 'darell',
-        'email' => 'users@gmail.com',
-        'password' => Hash::make('users'),
+        'email' => 'user@gmail.com',
+        'password' => Hash::make('user'),
         'level' => 'users'
     ]);
+
+    User::create([
+        'username' => 'darell',
+        'email' => 'editor@gmail.com',
+        'password' => Hash::make('editor'),
+        'level' => 'editor'
+    ]);
+
+    Category::create(['name' => 'News']);
+
+    Category::create(['name' => 'Products']);
+
+    Category::create(['name' => 'Sports']);
     }
 }

@@ -32,6 +32,11 @@
         @elseif (auth()->user()->level === 'users')
 
         <li class="nav-heading">Your Menu</li>
+
+        <li class="nav-item">
+            <div class="nav-link collapse"><a href="{{ route('home.view') }}"><i class="bi bi-house"></i>Home</a></div>
+        </li>
+
         <li class="nav-item">
             <div class="nav-link collapse"><a href="{{ route('berita-terkini.view') }}"><i class="bi bi-newspaper"></i>Berita Terkini</a></div>
         </li>
@@ -44,6 +49,28 @@
         <li class="nav-item">
             <div class="nav-link collapse"><a href="{{ route('logout') }}"><i class="bi bi-signout"></i>Logout</a></div>
         </li>
+
+        @elseif (auth()->user()->level === 'editor')
+
+        <li class="nav-heading">Your Menu</li>
+
+        <li class="nav-item">
+            <div class="nav-link collapse"><a href="{{ route('home.view') }}"><i class="bi bi-house"></i>Home</a></div>
+        </li>
+
+        <li class="nav-item">
+            <div class="nav-link collapse"><a href="{{ route('berita-terkini.view') }}"><i class="bi bi-newspaper"></i>Berita Terkini</a></div>
+        </li>
+
+        <li class="nav-item">
+            <div class="nav-link collapse"><a href="{{ route('about-us.view') }}"><i class="bi bi-question"></i>About Us</a></div>
+        </li>
+
+        <li class="nav-header">Others</li>
+        <li class="nav-item">
+            <div class="nav-link collapse"><a href="{{ route('logout') }}"><i class="bi bi-signout"></i>Logout</a></div>
+        </li>
+
         @endif
         @else
         <li class="nav-heading">Guest Menu</li>

@@ -13,10 +13,33 @@
     <div class="alert alert-success">
         {{ session('success') }}
     </div>
+@endif
+<main>
+    @can('is-editor')
+    <div class="d-flex justify-content-end p-3"><a href="{{ route('create-post.view') }}" class="btn btn-md btn-success">POST</a>
+        </div>
+    @endcan
+    <section class="news-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="first-news">
+                        ha
+                    </div>
+                </div>
 
-    @endif
+                <div class="col-md-6">
+                    <div class="list-news">
+                        Hhaha
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <form action="{{ route('logout') }}" class="form-group" method="POST">@csrf <button class="btn btn-md btn-primary" type="submit">LOGOUT</button></form>
+
+
     @endsection
 </body>
 </html>
